@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1040.0" prefWidth="1920.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.sipovsven.controller.MainController">
+   <children>
+  <AnchorPane fx:id="anchorPane" layoutX="14.0" minHeight="970.0" minWidth="1908.0" prefHeight="971.0" prefWidth="1908.0">
+         <children>
+            <TableView fx:id="tableview" layoutX="452.0" layoutY="115.0" prefHeight="809.0" prefWidth="1387.0" style="-fx-selection-bar: #C8CBD0;">
+              <columns>
+                <TableColumn fx:id="columCategory" prefWidth="139.0" text="Kategorie" />
+                <TableColumn fx:id="columProduct" minWidth="0.0" prefWidth="205.0" text="Produkt" />
+                  <TableColumn fx:id="columnWeight" prefWidth="62.0" text="Inhalt" />
+                  <TableColumn fx:id="columBuyPrice" prefWidth="103.0" text="Einkauf" />
+                  <TableColumn fx:id="columFirstChrgPercent" prefWidth="138.0" text="Aufschlag %" />
+                  <TableColumn fx:id="columFirstChrgEuro" minWidth="7.0" prefWidth="98.0" text="Aufschlag €" />
+                  <TableColumn fx:id="columSalonPrice" prefWidth="108.0" text="EK-Salon" />
+                  <TableColumn fx:id="columScndChrgPercent" prefWidth="107.0" text="Aufschlag %" />
+                  <TableColumn fx:id="columScdChrgEuro" prefWidth="99.0" text="Aufschlag €" />
+                  <TableColumn fx:id="cloumnExldTax" prefWidth="115.0" text="EVP exl. Mwst" />
+                  <TableColumn fx:id="columnTax" prefWidth="88.0" text="inkl. Mwst" />
+                  <TableColumn fx:id="columnCustomerPrice" prefWidth="124.0" text="EVP in Euro" />
+              </columns>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="0.0" offsetY="2.0" radius="0.0" width="0.0" />
+               </effect>
+            </TableView>
+            <Region fx:id="region" layoutX="-15.0" prefHeight="1080.0" prefWidth="385.0">
+               <effect>
+                  <DropShadow height="32.49" offsetX="1.0" radius="56.6075" spread="0.3" width="195.94" />
+               </effect>
+            </Region>
+            <ImageView fx:id="imgLogo" fitHeight="225.0" fitWidth="217.0" layoutX="78.0" layoutY="96.0" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ba3886f5-a841-48fa-9ae6-62f7015b7009_200x200.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="exportButton" buttonType="RAISED" layoutX="126.0" layoutY="674.0" onAction="#exportIO" prefHeight="57.0" prefWidth="103.0" text="Export" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ghCalculationButton" buttonType="RAISED" layoutX="73.0" layoutY="409.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="228.0" text="GH-Kalkulation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.9333333373069763" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="buyPriceButton" buttonType="RAISED" layoutX="73.0" layoutY="543.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#openBuyPrice" prefHeight="85.0" prefWidth="228.0" text="Einkaufspreis" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.9333333373069763" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <ImageView fitHeight="420.0" fitWidth="414.0" layoutX="-44.0" layoutY="718.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/waves2.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="searchBar" layoutX="1488.0" layoutY="71.0" onKeyPressed="#searchProduct" prefHeight="25.0" prefWidth="350.0" promptText="Suche" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

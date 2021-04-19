@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#requestFocus" prefHeight="1040.0" prefWidth="1920.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.sipovsven.controller.BuyPriceController">
+   <children>
+      <AnchorPane layoutX="14.0" minHeight="970.0" minWidth="1908.0" prefHeight="971.0" prefWidth="1908.0">
+         <children>
+            <Region fx:id="region" layoutX="-15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="385.0">
+               <effect>
+                  <DropShadow height="31.4" offsetX="1.0" radius="15.564999999999998" spread="0.19" width="32.86" />
+               </effect>
+            </Region>
+            <ImageView fx:id="imgLogo" fitHeight="225.0" fitWidth="217.0" layoutX="78.0" layoutY="96.0" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ba3886f5-a841-48fa-9ae6-62f7015b7009_200x200.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="exportButton" buttonType="RAISED" layoutX="126.0" layoutY="674.0" onAction="#exportIO" prefHeight="57.0" prefWidth="103.0" ripplerFill="WHITE" text="Export" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ghCalculationButton1" buttonType="RAISED" layoutX="73.0" layoutY="409.0" onAction="#openMenu" prefHeight="85.0" prefWidth="228.0" ripplerFill="WHITE" stylesheets="@../css/application.css" text="GH-Kalkulation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="foldingClaspLabel" alignment="CENTER" layoutX="475.0" layoutY="414.0" prefHeight="64.0" prefWidth="175.0" text="Pumpe/Klappverschluss" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelLabel" alignment="CENTER" layoutX="505.0" layoutY="24.0" prefHeight="64.0" prefWidth="115.0" text="Etikette" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="transportLabel" alignment="CENTER" layoutX="757.0" layoutY="24.0" prefHeight="64.0" prefWidth="163.0" text="Verpackung" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <TableView fx:id="contentView" layoutX="1003.0" layoutY="114.0" prefHeight="200.0" prefWidth="220.0">
+              <columns>
+                <TableColumn fx:id="columnContentName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="columnContentPrice" prefWidth="71.0" text="Preis" />
+              </columns>
+            </TableView>
+            <TableView fx:id="labelView" editable="true" layoutX="463.0" layoutY="114.0" prefHeight="200.0" prefWidth="220.0">
+              <columns>
+                <TableColumn fx:id="columnLabelName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="columnLabelPrice" prefWidth="71.0" text="Preis" />
+              </columns>
+            </TableView>
+            <Label fx:id="contentLabel" alignment="CENTER" layoutX="1047.0" layoutY="24.0" prefHeight="64.0" prefWidth="115.0" text="Inhalt" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <TableView fx:id="wrappingView" layoutX="738.0" layoutY="114.0" prefHeight="200.0" prefWidth="220.0">
+              <columns>
+                <TableColumn fx:id="columnWrapName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="columnWrapPrice" minWidth="2.0" prefWidth="71.0" text="Preis" />
+              </columns>
+            </TableView>
+            <TableView fx:id="pumpView" layoutX="463.0" layoutY="504.0" prefHeight="200.0" prefWidth="220.0">
+              <columns>
+                <TableColumn fx:id="columnPumpName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="columnPumpPrice" prefWidth="69.0" text="Preis" />
+              </columns>
+            </TableView>
+            <TableView fx:id="shippingView" layoutX="738.0" layoutY="504.0" prefHeight="200.0" prefWidth="220.0">
+              <columns>
+                <TableColumn fx:id="columnShippingName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="columnShippingPrice" prefWidth="71.0" text="Preis" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="1529.0" layoutY="959.0" onAction="#update" prefHeight="52.0" prefWidth="109.0" style="-fx-background-color: #7fcd0d;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXButton>
+            <TableView fx:id="productView" layoutX="1424.0" layoutY="99.0" onMouseClicked="#clickOnTable" prefHeight="410.0" prefWidth="457.0">
+              <columns>
+                <TableColumn fx:id="columnProductName" prefWidth="239.0" text="Name" />
+                  <TableColumn fx:id="columnProductSize" prefWidth="81.0" text="Größe" />
+                <TableColumn fx:id="columnProductBuyPrice" prefWidth="147.0" text="Einkaufspreis" />
+              </columns>
+            </TableView>
+            <Separator layoutX="1383.0" layoutY="36.0" orientation="VERTICAL" prefHeight="971.0" prefWidth="2.0" />
+            <TextField fx:id="productNameTxtField" layoutX="677.0" layoutY="909.0" prefHeight="32.0" prefWidth="326.0" promptText="Produkt Name" />
+            <Label layoutX="735.0" layoutY="843.0" text="Produkt Erstellen" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="1539.0" layoutY="37.0" text="Produkt Updaten" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="addLabelBtn" layoutX="467.0" layoutY="354.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addLabel" prefHeight="34.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: #7fcd0d;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="addWrappingBtn" layoutX="740.0" layoutY="354.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addWrap" prefHeight="34.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: #7fcd0d;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="foldingClaspLabel1" alignment="CENTER" layoutX="750.0" layoutY="414.0" prefHeight="64.0" prefWidth="175.0" text="Transport" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Button fx:id="addContentBtn" layoutX="1003.0" layoutY="354.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addContent" prefHeight="34.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: #7fcd0d;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="addPumpBtn" layoutX="464.0" layoutY="744.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addPump" prefHeight="34.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: #7fcd0d;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="addShippingBtn" layoutX="740.0" layoutY="745.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addShipping" prefHeight="34.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: #7fcd0d;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="addCategoryBtn" layoutX="1003.0" layoutY="744.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addCategory" prefHeight="34.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: #7fcd0d;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <TableView fx:id="categoryListView" layoutX="1005.0" layoutY="504.0" prefHeight="200.0" prefWidth="220.0">
+              <columns>
+                <TableColumn fx:id="columnCategoryName" prefWidth="219.0" text="Name" />
+              </columns>
+            </TableView>
+            <Label fx:id="categoryLbl" alignment="CENTER" layoutX="1017.0" layoutY="414.0" prefHeight="64.0" prefWidth="175.0" text="Kategorie" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="deleteCategoryBtn" layoutX="1155.0" layoutY="736.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteCategory" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" text=" ">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="deleteShippingBtn" layoutX="887.0" layoutY="736.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteShipping" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" text=" ">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="deletePumpBtn" layoutX="613.0" layoutY="736.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deletePump" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" text=" ">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="deleteLabelBtn" layoutX="613.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteLabel" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" text=" ">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="deleteWrappingBtn" layoutX="887.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteWrapping" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" text=" ">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="deleteContentBtn" layoutX="1153.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteContent" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" text=" ">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="refreshBtn" layoutX="1258.0" layoutY="88.0" onAction="#clickRefresh" prefHeight="85.0" prefWidth="93.0" ripplerFill="WHITE" text=" ">
+               <graphic>
+                  <ImageView fitHeight="89.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Actions-view-refresh-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <ChoiceBox fx:id="weightBox" layoutX="1041.0" layoutY="910.0" prefHeight="29.0" prefWidth="109.0" />
+            <JFXButton fx:id="buyPriceButton1" buttonType="RAISED" layoutX="73.0" layoutY="543.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#openBuyPrice" prefHeight="85.0" prefWidth="228.0" ripplerFill="WHITE" text="Einkaufspreis" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="420.0" fitWidth="414.0" layoutX="-44.0" layoutY="718.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/waves2.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="680.0" layoutY="822.0" prefHeight="0.0" prefWidth="347.0" />
+            <ListView fx:id="componentListView" layoutX="1491.0" layoutY="526.0" prefHeight="414.0" prefWidth="325.0" />
+            <CheckBox fx:id="grammChecker" layoutX="1185.0" layoutY="915.0" mnemonicParsing="false" onMouseReleased="#checkGram" text="Gramm" textFill="WHITE" />
+            <CheckBox fx:id="mlChecker" layoutX="1288.0" layoutY="915.0" mnemonicParsing="false" onAction="#checkMil" text="Milliliter" textFill="WHITE" />
+            <TextField fx:id="searchBar" layoutX="1472.0" layoutY="67.0" onKeyPressed="#searchProduct" prefHeight="25.0" prefWidth="350.0" promptText="Suche" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="bruttPriceTxtField" layoutX="691.0" layoutY="967.0" prefHeight="32.0" prefWidth="197.0" promptText="Brutto Preis" />
+      <JFXButton fx:id="addButton" buttonType="RAISED" layoutX="1055.0" layoutY="959.0" onAction="#add" prefHeight="52.0" prefWidth="109.0" style="-fx-background-color: #7fcd0d;" text="Erstellen" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="1693.0" layoutY="958.0" onAction="#delete" prefHeight="52.0" prefWidth="109.0" style="-fx-background-color: red;" text="Löschen" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+
+	<persistence-unit name="Preiskalkulator"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+
+		<properties>
+			<property name="hibernate.c3p0.min_size" value="1"></property>
+			<property name="hibernate.c3p0.max_size" value="1000"></property>
+			<property name="hibernate.c3p0.acquire_increment" value="1"></property>
+			<property name="hibernate.c3p0.idle_test_period" value="3000"></property>
+			<property name="hibernate.c3p0.max_statements" value="50"></property>
+			<property name="hibernate.c3p0.timeout" value="1800"></property>
+			<property name="hibernate.c3p0.validate" value="1800"></property>
+
+			<property name="javax.persistence.jdbc.driver"
+				value="org.apache.derby.jdbc.EmbeddedDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:derby:/home/test/databases/preiskalkulator;create=true" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="root" />
+
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.DerbyTenSevenDialect" />
+
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+		</properties>
+	</persistence-unit>
+</persistence>
+
+<!-- jdbc:derby://localhost:1527/myDB/preiskalkulator?useSSL=false&amp;serverTimezone=UTC -->

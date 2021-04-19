@@ -1,0 +1,232 @@
+
+ 
+ 
+ #columProduct{
+ 	
+    -fx-text-fill: green;
+    -fx-fixed-cell-size: 50.0;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+	-fx-font: 13.0px "Arial";
+	-fx-font-weight: bold;
+ }
+
+.table-row-cell:filled:hover {
+
+    -fx-size:50.0;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+
+
+}
+
+
+.table-view{
+		-fx-background-color: transparent;
+	}
+
+
+/*
+ * Header Labels
+ */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font: 16px "Arial";
+    -fx-font-weight: bold;
+    -fx-background-color: #298ddb;
+    
+
+}
+/*
+ * Background of tableview
+ */
+.table-view .column-header {
+    -fx-background-color: #298ddb;
+    -fx-pref-height: 50.0px;
+    -fx-font-weight: bold;
+    -fx-effect: innershadow(gaussian, #4F7EE3, 1.0, 0.5, 0.0, 0.0);
+
+}
+
+
+.table-view:row-selection {
+	-fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-fixed-cell-size: 50.0;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+
+}
+
+.table-view .table-column{
+    -fx-text-alignment: center;
+    -fx-alignment: CENTER ;
+   
+
+}
+
+ 
+ 
+.table-cell {
+    -fx-padding: 0.5em;
+    -fx-border-color: transparent -fx-box-border transparent transparent;
+    -fx-font: 13.0px "Arial";
+    -fx-text-fill: #212121;
+}
+ 
+.columBuyPrice.table-cell {
+    -fx-padding: 0.5em;
+    -fx-border-color: transparent -fx-box-border transparent transparent;
+    -fx-font: 20.0px arial;
+    -fx-text-fill: red;
+}
+ 
+.table-row-cell {
+    -fx-cell-size: 40.0px;
+    -fx-font-size: 15.0px;
+    -fx-font-family: arial;
+}
+  
+
+
+ 
+#textAboveInput{
+	-fx-text-fill: #ffffff;
+	
+} 
+#menuButton {
+	-fx-background-color: rgb(20.0,165.0,255.0);
+	 -fx-text-fill: #ffffff;
+}
+
+#backGround {
+-fx-background-color: rgb(20.0,165.0,255.0);
+}
+
+
+#ghCalculationButton1{
+	
+	-fx-background-color: linear-gradient(to left, #18419b, #95F2D9);
+	-fx-background-border-color: white;
+	-fx-background-radius:100.0px;
+	
+}
+
+#buyPriceButton1{
+	-fx-background-color: linear-gradient(to left, #18419b, #95F2D9);
+	-fx-background-border-color: white;
+	-fx-background-radius:100.0px;
+	
+}
+
+
+#JFXMenuButton{
+-fx-background-color: rgb(20.0,165.0,255.0);
+	-fx-text-fill: white;
+	
+}
+
+#Slider{
+	-fx-background-color:  #7fcd0d;
+	
+}
+#plusButton{
+	
+	-fx-background-color: #4bab83;
+	-fx-background-radius: 100.0;
+	-fx-background-radius: 100.0;
+	
+}
+
+
+#createButton{
+	-fx-background-color: #14a5ff;
+	-fx-text-fill: white;
+	-fx-border-radius:100.0;
+	-fx-background-radius:100.0;
+	
+}
+
+#savePathButton{
+	-fx-background-color: #4bab83;
+	-fx-text-fill: white;
+	-fx-background-radius: 100.0;
+	-fx-background-radius: 100.0;
+}
+
+#ghCalculationButton{
+	
+-fx-background-color: linear-gradient(to left, #18419b, #95F2D9);
+	-fx-background-border-color: white;
+	-fx-background-radius:100.0px;
+-fx-background-border-radius: 10.0px;
+
+}
+
+#buyPriceButton{
+	
+-fx-background-color: linear-gradient(to left, #18419b, #95F2D9);
+	-fx-background-border-color: white;
+	-fx-background-radius:100.0px;
+-fx-background-border-radius: 10.0px;
+}
+#refreshBtn{
+	
+	-fx-background-color: transparent;
+	-fx-background-border-color: white;
+	-fx-background-radius:100.0px;
+-fx-background-border-radius: 10.0px;
+}
+
+
+#exportButton{
+	
+	-fx-background-color: transparent;
+	-fx-border-color: white;
+	-fx-border-radius: 10.0px;
+	
+}
+
+#-cell:filled{
+	-fx-font-weight: bold;
+	
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+}
+#componentListView{
+	
+	-fx-padding: 0.5em;
+    -fx-border-color: transparent -fx-box-border transparent transparent;
+    -fx-font-weight: bold;
+    -fx-font: 13.0px "Arial";
+    -fx-text-fill: #212121;
+	
+}
+
+
+
+
+.Pane{
+	 -fx-background-color: #102B3F;
+	
+}
+#pane{
+	
+
+	 -fx-background-color: #102B3F;
+}
+
+#region{
+	 -fx-background-color: linear-gradient(to left, #18419b, #33b6ff);
+
+}
+
+#backGround {
+}
+
+
+
+
