@@ -19,7 +19,7 @@ public class IOService {
 
 		BufferedWriter fileWriter = new BufferedWriter(new FileWriter(csvFilePath));
 		fileWriter.write(
-				"id,Kategorie,Name,Gewicht,Einkaufspreis,Aufschlag %,Aufschlag EUR,EK-Salon,Aufschlag EUR,Aufschlag €,EVP exl, Mwst,EVP in Euro,content_id,label_id,pump_id,shipping_id,wrapping_id");
+				"id,Kategorie,Name,Gewicht,Einkaufspreis,Aufschlag %,Aufschlag EUR,EK-Salon,Aufschlag EUR,Aufschlag %,EVP exl, Mwst,EVP in Euro,content_id,label_id,pump_id,shipping_id,wrapping_id");
 
 		String cateCompare = "h";
 

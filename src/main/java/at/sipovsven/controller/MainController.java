@@ -204,7 +204,6 @@ public class MainController<T, S> extends App {
 		columProduct.setCellFactory(TextFieldTableCell.forTableColumn());
 		columCategory.setCellFactory(TextFieldTableCell.forTableColumn());
 		columFirstChrgEuro.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
-		columBuyPrice.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
 		columFirstChrgPercent.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
 		columSalonPrice.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
 		columScdChrgEuro.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
@@ -428,12 +427,14 @@ public class MainController<T, S> extends App {
 
 	@FXML
 	void openBuyPrice(ActionEvent event) throws Exception {
-		System.gc();
+
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/BuyPrice.fxml"));
-		Stage stage = (Stage) buyPriceButton.getScene().getWindow();
+		this.stage= (Stage) buyPriceButton.getScene().getWindow();
 		Scene scene = new Scene(loader.load());
 		scene.getStylesheets().add(getClass().getResource("/css/application.css").toExternalForm());
 		stage.setScene(scene);
+
+		System.gc();
 	}
 
 	

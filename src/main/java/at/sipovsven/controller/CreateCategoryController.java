@@ -33,7 +33,7 @@ public class CreateCategoryController {
 		category.setName(categoryNameTxtField.getText());
 		cateRepo.addCategory(category);
 		
-		notif.showNotificationOnPane("Kategorie hinzugefügt", "Kategorie: " + category.getName() + " erfolgreich hinzugefügt!", pane);
+		notif.showNotificationOnPane("Kategorie hinzugefï¿½gt", "Kategorie: " + category.getName() + " erfolgreich hinzugefÃ¼gt!", pane);
 		
 		categoryNameTxtField.clear();
 	}
